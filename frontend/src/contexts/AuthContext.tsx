@@ -4,7 +4,7 @@
 // Всі компоненти можуть отримати ці дані через хук useAuth().
 // Токен зберігається в localStorage, щоб не зникати після оновлення сторінки.
 // ============================================================
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 // Структура даних користувача після входу
 interface UserData {

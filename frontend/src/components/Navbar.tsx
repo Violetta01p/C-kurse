@@ -24,7 +24,7 @@ export const Navbar = () => {
     return (
         <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#111', marginBottom: '2rem', borderRadius: '8px' }}>
             <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <strong style={{ fontSize: '1.2em' }}>BankSystem</strong>
+                <Link to="/" style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', textDecoration: 'none' }}>BankSystem</Link>
 
                 {/* Посилання для клієнта */}
                 {user.role === 'Client' && <Link to="/dashboard" style={{ color: 'white', textDecoration: 'none' }}>My Account</Link>}

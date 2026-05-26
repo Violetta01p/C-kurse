@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
+import { Home } from './pages/Home';
 import { ClientDashboard } from './pages/ClientDashboard';
 import { ManagerDashboard } from './pages/ManagerDashboard';
 import { Transactions } from './pages/Transactions';
@@ -19,6 +20,9 @@ function App() {
       {/* Навігаційна панель — з'являється на всіх сторінках після входу */}
       <Navbar />
       <Routes>
+        {/* Головна сторінка */}
+        <Route path="/" element={<Home />} />
+
         {/* Спільні сторінки — доступні без авторизації */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -43,8 +47,8 @@ function App() {
           </ProtectedRoute>
         } />
 
-        {/* Якщо сторінка не знайдена — перенаправляємо на логін */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        {/* Якщо сторінка не знайдена — перенаправляємо на головну */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
