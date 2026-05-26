@@ -16,7 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* AuthProvider зберігає JWT токен та дані користувача у пам'яті */}
     <AuthProvider>
       {/* BrowserRouter дозволяє переходити між сторінками без перезавантаження */}
-      <BrowserRouter>
+      {/* Додано basename="/C-kurse" для коректної роботи роутингу на GitHub Pages */}
+      <BrowserRouter basename="/C-kurse">
         <App />
       </BrowserRouter>
     </AuthProvider>
