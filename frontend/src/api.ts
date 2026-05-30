@@ -6,8 +6,8 @@
 //   2. Перенаправляє на /login при помилці 401 (токен протермінований)
 // ============================================================
 
-// Базова адреса нашого .NET Web API
-export const API_URL = 'http://localhost:5000/api';
+// Базова адреса нашого .NET Web API в хмарі Render
+export const API_URL = 'https://c-kurse.onrender.com/api';
 
 // Відправляє HTTP запит до API з автоматичним додаванням токена авторизації
 export const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
